@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Tareas</title>
+    <link href="/webjars/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container mt-5">
+    <h1>Listado de Tareas</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Fecha de Inicio</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="tarea : ${tareas}">
+            <td th:text="${tarea.nombre}"></td>
+            <td th:text="${tarea.descripcion}"></td>
+            <td th:text="${tarea.fechaInicio}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <a href="/" class="btn btn-secondary">Volver a Inicio</a>
+</div>
+<script src="/webjars/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

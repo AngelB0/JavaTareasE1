@@ -1,0 +1,10 @@
+<mapper namespace="org.example.repository.TareaMapper">
+
+    <insert id="insertarTarea" parameterType="org.example.Tarea">
+        INSERT INTO tareas(nombre, descripcion, fecha_inicio) VALUES(#{nombre}, #{descripcion}, #{fechaInicio})
+    </insert>
+
+    <select id="obtenerTareas" resultType="org.example.Tarea">
+        SELECT * FROM tareas
+    </select>
+</mapper>
